@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>SpringProject</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    {{#userName}}
+        Logged in as : {{userName}}
+        <a href="/logout" role="button">Logout</a>
+    {{/userName}}
+
+    {{^userName}}
+        <a href="/oauth2/authorization/google" role="button">Google Login</a>
+    {{/userName}}
+</div>
+</body>
+</html>
